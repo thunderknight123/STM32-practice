@@ -1,0 +1,38 @@
+# Keil MDK 编译生成的中间文件（等价于 keilkill.bat 的清理范围）
+# 注意：.c/.h/.s 源文件、*.uvprojx 工程文件不会被忽略，必须上传！
+
+# 编译输出目录（Keil 会自动重建）
+Objects/
+Listings/
+DebugConfig/
+
+# Keil 编译产物（按扩展名兜底，防止新工程换目录名后漏掉）
+*.o
+*.crf
+*.d
+*.axf
+*.map
+*.lst
+*.lnp
+*.dep
+*.iex
+*.htm
+*.sct
+
+# keilkill.bat 中清理的其它文件
+*.bak
+*.ddk
+*.edk
+*.mpf
+*.mpj
+*.obj
+*.omf
+*.plg
+*.rpt
+*.tmp
+*.__i
+*.tra
+JLinkLog.txt
+
+# 用户个人界面布局文件（含计算机用户名，如 Project.uvguix.Hasee），每台电脑会重新生成
+*.uvguix.*
