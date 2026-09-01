@@ -24,7 +24,7 @@ int main(void)
 		
 		if (Key_num5 == (uint16_t)0) //如果不把0强制类型转换的话，会把前面函数的返回值“类型提升”（不过在这里或者一般对结果没影响）
 		{
-			Delay_ms(20); //用代码“消抖”
+			Delay_ms(20); //用代码“消抖”（把Delay放在if里面，即可在按键一按下就及时启动消抖！）
 			 GPIOA->ODR ^= (uint16_t)0x0001; //PA5控制PA0
 			 while (PAx_Key_Action(GPIO_Pin_5) == (uint16_t)0) //等待按键松开，确保一次按压只触发一次
 			 {
