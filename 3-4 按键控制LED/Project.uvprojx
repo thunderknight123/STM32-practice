@@ -679,6 +679,16 @@
               <FileType>5</FileType>
               <FilePath>.\KeyLED\LED.h</FilePath>
             </File>
+            <File>
+              <FileName>Key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\KeyLED\Key.c</FilePath>
+            </File>
+            <File>
+              <FileName>Key.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\KeyLED\Key.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
