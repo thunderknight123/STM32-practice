@@ -13,8 +13,8 @@ void Buzzer_Init_GPIOB(uint16_t Pin)
 	GPIO_Init(GPIOB , &GPIO_InitStruct);
 }
 
-//初始化GPIO口，光敏电阻的，由于Buzzer与Photoresisor的GPIO_Mode不一样，所以写了两个函数来分别初始化
-void Photoresistor_Init_GPIOB(uint16_t Pin)
+//初始化GPIO口，光敏电阻的，由于BuzLzer与Photoresisor的GPIO_Mode不一样，所以写了两个函数来分别初始化
+void LightSensor_Init_GPIOB(uint16_t Pin)
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB , ENABLE);
 	
@@ -38,4 +38,21 @@ void Buzzer_OFF(uint16_t Pin)
 	GPIO_SetBits(GPIOB , Pin);
 }
 
-
+//改变蜂鸣器引脚的状态（3V3 <-> 0V）
+void turn_Buzzer(uint16_t Pin)
+{
+	if (GPIO_ReadOutputDataBit(GPIOB , Pin) == (uint8_t)Bit_SET) //检测到Pin输出高电平，就将其转化为低电平
+	{
+		Buzzer_ON(Pin);
+	}
+	else //Pin输出低电平，就转为高电平
+	{
+		Buzzer_OFF(Pin);
+	}
+}
+	
+//获取光敏传感器处的引脚输入电平情况
+uint8_t Get_LightSensor(uint16_t Pin)
+{
+	return GPIO_ReadInputDataBit(GPIOB , Pin);
+}
