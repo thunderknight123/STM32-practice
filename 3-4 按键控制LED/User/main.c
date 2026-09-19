@@ -45,6 +45,5 @@ int main(void)
 			 }
 			Delay_ms(20); //用代码“消抖”
 		}
-	
 	}
 }
