@@ -3,7 +3,8 @@
 
 void TIM_Init(void);
 uint32_t Get_Num(void);
-void TIM3_IRQHandler(void);
+void TIM2_IRQHandler(void);
+void PA0_Init(void);
 
 
 #endif
