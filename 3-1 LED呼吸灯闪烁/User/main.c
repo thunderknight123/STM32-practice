@@ -11,8 +11,8 @@ void PWM_Init(void)
 	
 	//2. 配置TIM2的时基
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
-	TIM_TimeBaseStructure.TIM_Period = 999;
-	TIM_TimeBaseStructure.TIM_Prescaler = 71; //72MHz / （71 + 1） = 1 MHz = 1 us = 1e-6 s
+	TIM_TimeBaseStructure.TIM_Period = 1000 - 1;
+	TIM_TimeBaseStructure.TIM_Prescaler = 72 - 1; //72MHz / （71 + 1） = 1 MHz = 1 us = 1e-6 s
 	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //写等于0也是一样的
 		//TIM_ClockDivision是时钟分频因子，影响数字滤波器的采样频率，0代表采样频率=定时器时钟频率
 	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up; //设置成向上计数
