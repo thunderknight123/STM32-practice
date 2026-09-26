@@ -858,8 +858,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\System\TIM.c</PathWithFileName>
-      <FilenameWithoutPath>TIM.c</FilenameWithoutPath>
+      <PathWithFileName>.\System\IC.c</PathWithFileName>
+      <FilenameWithoutPath>IC.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -870,8 +870,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\System\TIM.h</PathWithFileName>
-      <FilenameWithoutPath>TIM.h</FilenameWithoutPath>
+      <PathWithFileName>.\System\IC.h</PathWithFileName>
+      <FilenameWithoutPath>IC.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

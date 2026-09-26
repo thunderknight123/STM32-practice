@@ -46,7 +46,8 @@ int main(void)
 			SPEED = 10;
 			OLED_ShowString(2, 7, "TOO FAST!");
 		}
-	
+	    /*==========================================*/
+		
 		RotationDirection(SPEED);
 	}
 }

@@ -6,7 +6,7 @@ void Motor_Init(void)
 	//先搞定PWM波形的输出（注意：我把电机驱动模块的PWMA接到了PA2）
 	/*=============================================================*/
 	
-	  //a. 打开PA2，PA4，PA5的时钟，并调为复用推挽输出（4，5分别接到了AIN1，AIN2）
+	  //a. 打开PA2的时钟，并调为复用推挽输出（4，5分别接到了AIN1，AIN2）
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 	
 	GPIO_InitTypeDef GPIO_InitStruct;
@@ -40,7 +40,7 @@ void Motor_Init(void)
 	
 	TIM_OC3Init(TIM2, &TIM_OCInitStructure);
 	
-	TIM_OC3PreloadConfig(TIM2,TIM_OCPreload_Enable); //开启CCR3的预装载寄存器
+	TIM_OC3PreloadConfig(TIM2,TIM_OCPreload_Enable); //开启CCR3的预装载寄存器（在运行中动态改变CCR的时候一定要开）
 	
 	TIM_Cmd(TIM2, ENABLE); //最后开启定时器TIM2
 }
