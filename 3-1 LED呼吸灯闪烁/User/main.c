@@ -6,7 +6,7 @@
 //初始化PWM引脚和定时器
 void PWM_Init(void)
 {
-	//1. 将TIM2挂在APB1总线上
+	//1. 将TIM2挂在APB1总线上（俗称“上电”，因为外设的默认是“没电的”）
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 , ENABLE);
 	
 	//2. 配置TIM2的时基
